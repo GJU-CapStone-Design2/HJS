@@ -1,0 +1,1086 @@
+
+pytorch
+2.11.0+cpu:¨≥
+ö
+input
+e_conv1.weight
+e_conv1.biasconv2dnode_conv2d"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Ji
+	namespace\: model.enhance_net_nopool/e_conv1: torch.nn.modules.conv.Conv2d/conv2d: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J∂
+pkg.torch.onnx.fx_nodeõ%conv2d : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%x, %p_e_conv1_weight, %p_e_conv1_bias, [1, 1], [1, 1]), kwargs = {})J7
+pkg.torch.onnx.name_scopes['', 'e_conv1', 'conv2d']J•
+pkg.torch.onnx.stack_traceÜFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 24, in forward
+    x1 = self.relu(self.e_conv1(x))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+⁄
+conv2drelu	node_relu"ReluJf
+	namespaceY: model.enhance_net_nopool/relu: torch.nn.modules.activation.ReLU/relu: aten.relu.defaultJw
+pkg.torch.onnx.class_hierarchyU['model.enhance_net_nopool', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÉ
+pkg.torch.onnx.fx_nodei%relu : [num_users=2] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d,), kwargs = {})J2
+pkg.torch.onnx.name_scopes['', 'relu', 'relu']Jù
+pkg.torch.onnx.stack_trace˛File "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 24, in forward
+    x1 = self.relu(self.e_conv1(x))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+ß
+relu
+e_conv2.weight
+e_conv2.biasconv2d_1node_conv2d_1"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jk
+	namespace^: model.enhance_net_nopool/e_conv2: torch.nn.modules.conv.Conv2d/conv2d_1: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jª
+pkg.torch.onnx.fx_node†%conv2d_1 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu, %p_e_conv2_weight, %p_e_conv2_bias, [1, 1], [1, 1]), kwargs = {})J9
+pkg.torch.onnx.name_scopes['', 'e_conv2', 'conv2d_1']J¶
+pkg.torch.onnx.stack_traceáFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 25, in forward
+    x2 = self.relu(self.e_conv2(x1))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+È
+conv2d_1relu_1node_relu_1"ReluJh
+	namespace[: model.enhance_net_nopool/relu: torch.nn.modules.activation.ReLU/relu_1: aten.relu.defaultJw
+pkg.torch.onnx.class_hierarchyU['model.enhance_net_nopool', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_1 : [num_users=2] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_1,), kwargs = {})J4
+pkg.torch.onnx.name_scopes['', 'relu', 'relu_1']Jû
+pkg.torch.onnx.stack_traceˇFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 25, in forward
+    x2 = self.relu(self.e_conv2(x1))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+´
+relu_1
+e_conv3.weight
+e_conv3.biasconv2d_2node_conv2d_2"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jk
+	namespace^: model.enhance_net_nopool/e_conv3: torch.nn.modules.conv.Conv2d/conv2d_2: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']JΩ
+pkg.torch.onnx.fx_node¢%conv2d_2 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_1, %p_e_conv3_weight, %p_e_conv3_bias, [1, 1], [1, 1]), kwargs = {})J9
+pkg.torch.onnx.name_scopes['', 'e_conv3', 'conv2d_2']J¶
+pkg.torch.onnx.stack_traceáFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 26, in forward
+    x3 = self.relu(self.e_conv3(x2))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+È
+conv2d_2relu_2node_relu_2"ReluJh
+	namespace[: model.enhance_net_nopool/relu: torch.nn.modules.activation.ReLU/relu_2: aten.relu.defaultJw
+pkg.torch.onnx.class_hierarchyU['model.enhance_net_nopool', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_2 : [num_users=2] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_2,), kwargs = {})J4
+pkg.torch.onnx.name_scopes['', 'relu', 'relu_2']Jû
+pkg.torch.onnx.stack_traceˇFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 26, in forward
+    x3 = self.relu(self.e_conv3(x2))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+´
+relu_2
+e_conv4.weight
+e_conv4.biasconv2d_3node_conv2d_3"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jk
+	namespace^: model.enhance_net_nopool/e_conv4: torch.nn.modules.conv.Conv2d/conv2d_3: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']JΩ
+pkg.torch.onnx.fx_node¢%conv2d_3 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_2, %p_e_conv4_weight, %p_e_conv4_bias, [1, 1], [1, 1]), kwargs = {})J9
+pkg.torch.onnx.name_scopes['', 'e_conv4', 'conv2d_3']J¶
+pkg.torch.onnx.stack_traceáFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 27, in forward
+    x4 = self.relu(self.e_conv4(x3))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+È
+conv2d_3relu_3node_relu_3"ReluJh
+	namespace[: model.enhance_net_nopool/relu: torch.nn.modules.activation.ReLU/relu_3: aten.relu.defaultJw
+pkg.torch.onnx.class_hierarchyU['model.enhance_net_nopool', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_3,), kwargs = {})J4
+pkg.torch.onnx.name_scopes['', 'relu', 'relu_3']Jû
+pkg.torch.onnx.stack_traceˇFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 27, in forward
+    x4 = self.relu(self.e_conv4(x3))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+¢
+relu_2
+relu_3catnode_cat"Concat*
+axis†J=
+	namespace0: model.enhance_net_nopool/cat: aten.cat.defaultJR
+pkg.torch.onnx.class_hierarchy0['model.enhance_net_nopool', 'aten.cat.default']Jé
+pkg.torch.onnx.fx_nodet%cat : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%relu_2, %relu_3], 1), kwargs = {})J)
+pkg.torch.onnx.name_scopes['', 'cat']Jú
+pkg.torch.onnx.stack_trace~File "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 28, in forward
+    x5 = self.relu(self.e_conv5(torch.cat([x3,x4],1)))
+∑
+cat
+e_conv5.weight
+e_conv5.biasconv2d_4node_conv2d_4"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jk
+	namespace^: model.enhance_net_nopool/e_conv5: torch.nn.modules.conv.Conv2d/conv2d_4: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J∫
+pkg.torch.onnx.fx_nodeü%conv2d_4 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat, %p_e_conv5_weight, %p_e_conv5_bias, [1, 1], [1, 1]), kwargs = {})J9
+pkg.torch.onnx.name_scopes['', 'e_conv5', 'conv2d_4']J∏
+pkg.torch.onnx.stack_traceôFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 28, in forward
+    x5 = self.relu(self.e_conv5(torch.cat([x3,x4],1)))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+˚
+conv2d_4relu_4node_relu_4"ReluJh
+	namespace[: model.enhance_net_nopool/relu: torch.nn.modules.activation.ReLU/relu_4: aten.relu.defaultJw
+pkg.torch.onnx.class_hierarchyU['model.enhance_net_nopool', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_4 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_4,), kwargs = {})J4
+pkg.torch.onnx.name_scopes['', 'relu', 'relu_4']J∞
+pkg.torch.onnx.stack_traceëFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 28, in forward
+    x5 = self.relu(self.e_conv5(torch.cat([x3,x4],1)))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+¨
+relu_1
+relu_4cat_1
+node_cat_1"Concat*
+axis†J?
+	namespace2: model.enhance_net_nopool/cat_1: aten.cat.defaultJR
+pkg.torch.onnx.class_hierarchy0['model.enhance_net_nopool', 'aten.cat.default']Jê
+pkg.torch.onnx.fx_nodev%cat_1 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%relu_1, %relu_4], 1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'cat_1']Jú
+pkg.torch.onnx.stack_trace~File "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 29, in forward
+    x6 = self.relu(self.e_conv6(torch.cat([x2,x5],1)))
+ª
+cat_1
+e_conv6.weight
+e_conv6.biasconv2d_5node_conv2d_5"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jk
+	namespace^: model.enhance_net_nopool/e_conv6: torch.nn.modules.conv.Conv2d/conv2d_5: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jº
+pkg.torch.onnx.fx_node°%conv2d_5 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_1, %p_e_conv6_weight, %p_e_conv6_bias, [1, 1], [1, 1]), kwargs = {})J9
+pkg.torch.onnx.name_scopes['', 'e_conv6', 'conv2d_5']J∏
+pkg.torch.onnx.stack_traceôFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 29, in forward
+    x6 = self.relu(self.e_conv6(torch.cat([x2,x5],1)))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+˚
+conv2d_5relu_5node_relu_5"ReluJh
+	namespace[: model.enhance_net_nopool/relu: torch.nn.modules.activation.ReLU/relu_5: aten.relu.defaultJw
+pkg.torch.onnx.class_hierarchyU['model.enhance_net_nopool', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_5 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_5,), kwargs = {})J4
+pkg.torch.onnx.name_scopes['', 'relu', 'relu_5']J∞
+pkg.torch.onnx.stack_traceëFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 29, in forward
+    x6 = self.relu(self.e_conv6(torch.cat([x2,x5],1)))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+´
+relu
+relu_5cat_2
+node_cat_2"Concat*
+axis†J?
+	namespace2: model.enhance_net_nopool/cat_2: aten.cat.defaultJR
+pkg.torch.onnx.class_hierarchy0['model.enhance_net_nopool', 'aten.cat.default']Jé
+pkg.torch.onnx.fx_nodet%cat_2 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%relu, %relu_5], 1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'cat_2']Jü
+pkg.torch.onnx.stack_traceÄFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 30, in forward
+    x_r = torch.tanh(self.e_conv7(torch.cat([x1,x6],1)))
+Ω
+cat_2
+e_conv7.weight
+e_conv7.biasconv2d_6node_conv2d_6"Conv*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jk
+	namespace^: model.enhance_net_nopool/e_conv7: torch.nn.modules.conv.Conv2d/conv2d_6: aten.conv2d.defaultJu
+pkg.torch.onnx.class_hierarchyS['model.enhance_net_nopool', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jº
+pkg.torch.onnx.fx_node°%conv2d_6 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_2, %p_e_conv7_weight, %p_e_conv7_bias, [1, 1], [1, 1]), kwargs = {})J9
+pkg.torch.onnx.name_scopes['', 'e_conv7', 'conv2d_6']J∫
+pkg.torch.onnx.stack_traceõFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 30, in forward
+    x_r = torch.tanh(self.e_conv7(torch.cat([x1,x6],1)))
+  File "C:\Users\PC\zerodce\Lib\site-packages\torch\nn\modules\conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ç
+conv2d_6tanh	node_tanh"TanhJ?
+	namespace2: model.enhance_net_nopool/tanh: aten.tanh.defaultJS
+pkg.torch.onnx.class_hierarchy1['model.enhance_net_nopool', 'aten.tanh.default']JÖ
+pkg.torch.onnx.fx_nodek%tanh : [num_users=1] = call_function[target=torch.ops.aten.tanh.default](args = (%conv2d_6,), kwargs = {})J*
+pkg.torch.onnx.name_scopes['', 'tanh']Jü
+pkg.torch.onnx.stack_traceÄFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 30, in forward
+    x_r = torch.tanh(self.e_conv7(torch.cat([x1,x6],1)))
+µ
+tanhsplit_split_0split_split_1split_split_2split_split_3split_split_4split_split_5split_split_6split_split_7node_Split_16"Split*
+axis†*
+num_outputs†
+á
+input
+val_8pow_1
+node_pow_1"PowJE
+	namespace8: model.enhance_net_nopool/pow_1: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']JÜ
+pkg.torch.onnx.fx_nodel%pow_1 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%x, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_1']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 33, in forward
+    x = x + r1*(torch.pow(x,2)-x)
+Ì
+pow_1
+inputsubnode_sub"SubJ<
+	namespace/: model.enhance_net_nopool/sub: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']JÇ
+pkg.torch.onnx.fx_nodeh%sub : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_1, %x), kwargs = {})J)
+pkg.torch.onnx.name_scopes['', 'sub']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 33, in forward
+    x = x + r1*(torch.pow(x,2)-x)
+˜
+split_split_0
+submulnode_mul"MulJ<
+	namespace/: model.enhance_net_nopool/mul: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']JÜ
+pkg.torch.onnx.fx_nodel%mul : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem, %sub), kwargs = {})J)
+pkg.torch.onnx.name_scopes['', 'mul']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 33, in forward
+    x = x + r1*(torch.pow(x,2)-x)
+È
+input
+muladdnode_add"AddJ<
+	namespace/: model.enhance_net_nopool/add: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']JÄ
+pkg.torch.onnx.fx_nodef%add : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%x, %mul), kwargs = {})J)
+pkg.torch.onnx.name_scopes['', 'add']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 33, in forward
+    x = x + r1*(torch.pow(x,2)-x)
+á
+add
+val_8pow_2
+node_pow_2"PowJE
+	namespace8: model.enhance_net_nopool/pow_2: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jà
+pkg.torch.onnx.fx_noden%pow_2 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_2']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 34, in forward
+    x = x + r2*(torch.pow(x,2)-x)
+˜
+pow_2
+addsub_1
+node_sub_1"SubJ>
+	namespace1: model.enhance_net_nopool/sub_1: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']JÜ
+pkg.torch.onnx.fx_nodel%sub_1 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_2, %add), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_1']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 34, in forward
+    x = x + r2*(torch.pow(x,2)-x)
+á
+split_split_1
+sub_1mul_1
+node_mul_1"MulJ>
+	namespace1: model.enhance_net_nopool/mul_1: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_1 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_1, %sub_1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_1']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 34, in forward
+    x = x + r2*(torch.pow(x,2)-x)
+˜
+add
+mul_1add_1
+node_add_1"AddJ>
+	namespace1: model.enhance_net_nopool/add_1: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']JÜ
+pkg.torch.onnx.fx_nodel%add_1 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add, %mul_1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_1']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 34, in forward
+    x = x + r2*(torch.pow(x,2)-x)
+ã
+add_1
+val_8pow_3
+node_pow_3"PowJE
+	namespace8: model.enhance_net_nopool/pow_3: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jä
+pkg.torch.onnx.fx_nodep%pow_3 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add_1, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_3']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 35, in forward
+    x = x + r3*(torch.pow(x,2)-x)
+˚
+pow_3
+add_1sub_2
+node_sub_2"SubJ>
+	namespace1: model.enhance_net_nopool/sub_2: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_2 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_3, %add_1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_2']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 35, in forward
+    x = x + r3*(torch.pow(x,2)-x)
+á
+split_split_2
+sub_2mul_2
+node_mul_2"MulJ>
+	namespace1: model.enhance_net_nopool/mul_2: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_2 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_2, %sub_2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_2']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 35, in forward
+    x = x + r3*(torch.pow(x,2)-x)
+˚
+add_1
+mul_2add_2
+node_add_2"AddJ>
+	namespace1: model.enhance_net_nopool/add_2: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']Jà
+pkg.torch.onnx.fx_noden%add_2 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_1, %mul_2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_2']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 35, in forward
+    x = x + r3*(torch.pow(x,2)-x)
+ô
+add_2
+val_8pow_4
+node_pow_4"PowJE
+	namespace8: model.enhance_net_nopool/pow_4: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jä
+pkg.torch.onnx.fx_nodep%pow_4 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add_2, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_4']Jï
+pkg.torch.onnx.stack_tracewFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 36, in forward
+    enhance_image_1 = x + r4*(torch.pow(x,2)-x)
+â
+pow_4
+add_2sub_3
+node_sub_3"SubJ>
+	namespace1: model.enhance_net_nopool/sub_3: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_3 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_4, %add_2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_3']Jï
+pkg.torch.onnx.stack_tracewFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 36, in forward
+    enhance_image_1 = x + r4*(torch.pow(x,2)-x)
+ï
+split_split_3
+sub_3mul_3
+node_mul_3"MulJ>
+	namespace1: model.enhance_net_nopool/mul_3: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_3 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_3, %sub_3), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_3']Jï
+pkg.torch.onnx.stack_tracewFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 36, in forward
+    enhance_image_1 = x + r4*(torch.pow(x,2)-x)
+í
+add_2
+mul_3enhanced_image
+node_add_3"AddJ>
+	namespace1: model.enhance_net_nopool/add_3: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']Jà
+pkg.torch.onnx.fx_noden%add_3 : [num_users=4] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_2, %mul_3), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_3']Jï
+pkg.torch.onnx.stack_tracewFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 36, in forward
+    enhance_image_1 = x + r4*(torch.pow(x,2)-x)
+ø
+enhanced_image
+val_8pow_5
+node_pow_5"PowJE
+	namespace8: model.enhance_net_nopool/pow_5: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jä
+pkg.torch.onnx.fx_nodep%pow_5 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add_3, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_5']J≤
+pkg.torch.onnx.stack_traceìFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 37, in forward
+    x = enhance_image_1 + r5*(torch.pow(enhance_image_1,2)-enhance_image_1)
+Ø
+pow_5
+enhanced_imagesub_4
+node_sub_4"SubJ>
+	namespace1: model.enhance_net_nopool/sub_4: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_4 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_5, %add_3), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_4']J≤
+pkg.torch.onnx.stack_traceìFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 37, in forward
+    x = enhance_image_1 + r5*(torch.pow(enhance_image_1,2)-enhance_image_1)
+≤
+split_split_4
+sub_4mul_4
+node_mul_4"MulJ>
+	namespace1: model.enhance_net_nopool/mul_4: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_4 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_4, %sub_4), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_4']J≤
+pkg.torch.onnx.stack_traceìFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 37, in forward
+    x = enhance_image_1 + r5*(torch.pow(enhance_image_1,2)-enhance_image_1)
+Ø
+enhanced_image
+mul_4add_4
+node_add_4"AddJ>
+	namespace1: model.enhance_net_nopool/add_4: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']Jà
+pkg.torch.onnx.fx_noden%add_4 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_3, %mul_4), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_4']J≤
+pkg.torch.onnx.stack_traceìFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 37, in forward
+    x = enhance_image_1 + r5*(torch.pow(enhance_image_1,2)-enhance_image_1)
+ã
+add_4
+val_8pow_6
+node_pow_6"PowJE
+	namespace8: model.enhance_net_nopool/pow_6: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jä
+pkg.torch.onnx.fx_nodep%pow_6 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add_4, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_6']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 38, in forward
+    x = x + r6*(torch.pow(x,2)-x)
+˚
+pow_6
+add_4sub_5
+node_sub_5"SubJ>
+	namespace1: model.enhance_net_nopool/sub_5: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_5 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_6, %add_4), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_5']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 38, in forward
+    x = x + r6*(torch.pow(x,2)-x)
+á
+split_split_5
+sub_5mul_5
+node_mul_5"MulJ>
+	namespace1: model.enhance_net_nopool/mul_5: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_5 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_5, %sub_5), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_5']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 38, in forward
+    x = x + r6*(torch.pow(x,2)-x)
+˚
+add_4
+mul_5add_5
+node_add_5"AddJ>
+	namespace1: model.enhance_net_nopool/add_5: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']Jà
+pkg.torch.onnx.fx_noden%add_5 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_4, %mul_5), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_5']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 38, in forward
+    x = x + r6*(torch.pow(x,2)-x)
+ã
+add_5
+val_8pow_7
+node_pow_7"PowJE
+	namespace8: model.enhance_net_nopool/pow_7: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jä
+pkg.torch.onnx.fx_nodep%pow_7 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add_5, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_7']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 39, in forward
+    x = x + r7*(torch.pow(x,2)-x)
+˚
+pow_7
+add_5sub_6
+node_sub_6"SubJ>
+	namespace1: model.enhance_net_nopool/sub_6: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_6 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_7, %add_5), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_6']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 39, in forward
+    x = x + r7*(torch.pow(x,2)-x)
+á
+split_split_6
+sub_6mul_6
+node_mul_6"MulJ>
+	namespace1: model.enhance_net_nopool/mul_6: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_6 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_6, %sub_6), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_6']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 39, in forward
+    x = x + r7*(torch.pow(x,2)-x)
+˚
+add_5
+mul_6add_6
+node_add_6"AddJ>
+	namespace1: model.enhance_net_nopool/add_6: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']Jà
+pkg.torch.onnx.fx_noden%add_6 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_5, %mul_6), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_6']Já
+pkg.torch.onnx.stack_traceiFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 39, in forward
+    x = x + r7*(torch.pow(x,2)-x)
+ó
+add_6
+val_8pow_8
+node_pow_8"PowJE
+	namespace8: model.enhance_net_nopool/pow_8: aten.pow.Tensor_ScalarJX
+pkg.torch.onnx.class_hierarchy6['model.enhance_net_nopool', 'aten.pow.Tensor_Scalar']Jä
+pkg.torch.onnx.fx_nodep%pow_8 : [num_users=1] = call_function[target=torch.ops.aten.pow.Tensor_Scalar](args = (%add_6, 2), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'pow_8']Jì
+pkg.torch.onnx.stack_traceuFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 40, in forward
+    enhance_image = x + r8*(torch.pow(x,2)-x)
+á
+pow_8
+add_6sub_7
+node_sub_7"SubJ>
+	namespace1: model.enhance_net_nopool/sub_7: aten.sub.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_7 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%pow_8, %add_6), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'sub_7']Jì
+pkg.torch.onnx.stack_traceuFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 40, in forward
+    enhance_image = x + r8*(torch.pow(x,2)-x)
+ì
+split_split_7
+sub_7mul_7
+node_mul_7"MulJ>
+	namespace1: model.enhance_net_nopool/mul_7: aten.mul.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_7 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%getitem_7, %sub_7), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'mul_7']Jì
+pkg.torch.onnx.stack_traceuFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 40, in forward
+    enhance_image = x + r8*(torch.pow(x,2)-x)
+í
+add_6
+mul_7illumination_map
+node_add_7"AddJ>
+	namespace1: model.enhance_net_nopool/add_7: aten.add.TensorJQ
+pkg.torch.onnx.class_hierarchy/['model.enhance_net_nopool', 'aten.add.Tensor']Jà
+pkg.torch.onnx.fx_noden%add_7 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_6, %mul_7), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'add_7']Jì
+pkg.torch.onnx.stack_traceuFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 40, in forward
+    enhance_image = x + r8*(torch.pow(x,2)-x)
+Ÿ
+split_split_0
+split_split_1
+split_split_2
+split_split_3
+split_split_4
+split_split_5
+split_split_6
+split_split_7cat_3
+node_cat_3"Concat*
+axis†J?
+	namespace2: model.enhance_net_nopool/cat_3: aten.cat.defaultJR
+pkg.torch.onnx.class_hierarchy0['model.enhance_net_nopool', 'aten.cat.default']J›
+pkg.torch.onnx.fx_node¬%cat_3 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%getitem, %getitem_1, %getitem_2, %getitem_3, %getitem_4, %getitem_5, %getitem_6, %getitem_7], 1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'cat_3']Jî
+pkg.torch.onnx.stack_tracevFile "C:\Users\PC\Zero-DCE\Zero-DCE_code\model.py", line 41, in forward
+    r = torch.cat([r1,r2,r3,r4,r5,r6,r7,r8],1)
+main_graph*\ Be_conv1.weightj!
+locationzero_dce_pp.onnx.dataj
+offset0j
+length3456p*ï Be_conv1.biasJÄ,Ü =X∞'=£H>À‘=0Ú=¯i„ü-wg∫y˝ï=[>›.™í_4æçªW˘Jπ\M=!ºí–Ò=»T^=Q>Ît=m»√<çFΩÈπ†§SÑîπ‹,=ô=˛=∑ÙwÜ˜¥6Â˛∏ıæ=»î>âÚ^=6Z>*ï Be_conv2.biasJÄ}⁄m<míó<,¸∏dË≥< ‡∏cE-=uQ=•(e<]öºµ⁄.Ωl~b<"Ωc=	6Ω¶“JΩÀÛØÏœπª¥Õ*ªÌl<iÕnº⁄0uº:∑€è"=e	ï∫r$Y<IÓeîƒáºZÖ=ªf⁄<9/ﬂ:ΩFtºõ<∏Œ∏*ï Be_conv3.biasJÄêÅ=XNT<ˆF=pﬂ;≤∂<º•∑<E≈ú<;ˆ›;ÿú¯ªcäSº3 ;≈t…<“µ¿<}H<WÍ<P∏&ë◊∫êA™<@›‹;€∂ºª°È∫Òá¸ªÑP±∆àº˜Ô´™†ü<y M=Awº
+ƒ<-P=ÑQUß*ï Be_conv4.biasJÄ}ññ∏Ïè;%œê<ÎÖ<w=‚Œ≤ãm—£i¨∑Ÿ@Õ;áç∆;</W¯<ip{<nj€;[ü∫π—<;$jÒ:Ë ∞m"œ;∫Éf<„Á£û§π:…c∫<2<6Ï<—´#ªNÙ7<MB£ÁÈ≤<î5<«∑„≠¸ÓÅ8*ï Be_conv5.biasJÄJ•À<;≈<2`©<‹Ëe;•]Z∫dhΩ<Øº;Ìºù£Ä∞≈≤≠kë<˘â<øúª9>•Ù<
+òÏÆhí<Ñ)±<·±ä±~;6ùõ0Æ¸;	õ™#Jô∞ﬂó†<]˝®<’><:≈Û<¸‘πR‰<ÿZ•<“æÿ:>ﬁ‰<*ï Be_conv6.biasJÄ–∆‘<9…»<AP=’;óªÅÃ<<¢}pM<£Ù<Z•ëπ/tÃ<u}Ÿ<å»∞ñYÀ<@Í¢ªø9∫b|$=`Øë∫N∆Oªe&Ø<ÈMÕ≤“ëå<·hºv£&<W@7ê»”=≈F;<ëf<Æô¡<ﬂàË<ö¶ª∞<=Gˆª*tBe_conv7.biasJ`5m‘:|	~ºyyåΩ¢>áª.Cº7®Ÿº·#≤ºsúªWÀΩuˆ»9ø∆∏;ËABΩV˝≈º {ºùÃﬂºÒ”≥ªo£ºÊj.Ωè#…º≈ΩQºÀ0ùº	œº˘uºÏ~Üº*`  Be_conv2.weightj!
+locationzero_dce_pp.onnx.dataj
+offset3456j
+length36864p*a  Be_conv3.weightj!
+locationzero_dce_pp.onnx.dataj
+offset40320j
+length36864p*a  Be_conv4.weightj!
+locationzero_dce_pp.onnx.dataj
+offset77184j
+length36864p*b @Be_conv5.weightj!
+locationzero_dce_pp.onnx.dataj
+offset169344j
+length73728p*b @Be_conv6.weightj!
+locationzero_dce_pp.onnx.dataj
+offset243072j
+length73728p*b@Be_conv7.weightj!
+locationzero_dce_pp.onnx.dataj
+offset114048j
+length55296p*Bval_8J   @Z«
+input
+
+
+
+‡
+Ä"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"&
+!pkg.torch.onnx.original_node_namexbó
+enhanced_image
+
+
+
+‡
+Ä"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"*
+!pkg.torch.onnx.original_node_nameadd_3bô
+illumination_map
+
+
+
+‡
+Ä"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"*
+!pkg.torch.onnx.original_node_nameadd_7bb
+cat_3
+
+
+
+‡
+Ä"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUTj‹
+e_conv1.weight
+
+ 
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv1_weightjÃ
+e_conv1.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv1_biasjÃ
+e_conv2.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv2_biasjÃ
+e_conv3.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv3_biasjÃ
+e_conv4.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv4_biasjÃ
+e_conv5.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv5_biasjÃ
+e_conv6.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv6_biasjÃ
+e_conv7.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"3
+!pkg.torch.onnx.original_node_namep_e_conv7_biasj‹
+e_conv2.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv2_weightj‹
+e_conv3.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv3_weightj‹
+e_conv4.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv4_weightj‹
+e_conv5.weight
+
+ 
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv5_weightj‹
+e_conv6.weight
+
+ 
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv6_weightj‹
+e_conv7.weight
+
+
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_e_conv7_weightj
+val_8
+ j"
+conv2d
+
+
+ 
+‡
+Äj 
+relu
+
+
+ 
+‡
+Äj$
+conv2d_1
+
+
+ 
+‡
+Äj"
+relu_1
+
+
+ 
+‡
+Äj$
+conv2d_2
+
+
+ 
+‡
+Äj"
+relu_2
+
+
+ 
+‡
+Äj$
+conv2d_3
+
+
+ 
+‡
+Äj"
+relu_3
+
+
+ 
+‡
+Äj
+cat
+
+
+@
+‡
+Äj$
+conv2d_4
+
+
+ 
+‡
+Äj"
+relu_4
+
+
+ 
+‡
+Äj!
+cat_1
+
+
+@
+‡
+Äj$
+conv2d_5
+
+
+ 
+‡
+Äj"
+relu_5
+
+
+ 
+‡
+Äj!
+cat_2
+
+
+@
+‡
+Äj$
+conv2d_6
+
+
+
+‡
+Äj 
+tanh
+
+
+
+‡
+Äj)
+split_split_0
+
+
+
+‡
+Äj)
+split_split_1
+
+
+
+‡
+Äj)
+split_split_2
+
+
+
+‡
+Äj)
+split_split_3
+
+
+
+‡
+Äj)
+split_split_4
+
+
+
+‡
+Äj)
+split_split_5
+
+
+
+‡
+Äj)
+split_split_6
+
+
+
+‡
+Äj)
+split_split_7
+
+
+
+‡
+Äj!
+pow_1
+
+
+
+‡
+Äj
+sub
+
+
+
+‡
+Äj
+mul
+
+
+
+‡
+Äj
+add
+
+
+
+‡
+Äj!
+pow_2
+
+
+
+‡
+Äj!
+sub_1
+
+
+
+‡
+Äj!
+mul_1
+
+
+
+‡
+Äj!
+add_1
+
+
+
+‡
+Äj!
+pow_3
+
+
+
+‡
+Äj!
+sub_2
+
+
+
+‡
+Äj!
+mul_2
+
+
+
+‡
+Äj!
+add_2
+
+
+
+‡
+Äj!
+pow_4
+
+
+
+‡
+Äj!
+sub_3
+
+
+
+‡
+Äj!
+mul_3
+
+
+
+‡
+Äj!
+pow_5
+
+
+
+‡
+Äj!
+sub_4
+
+
+
+‡
+Äj!
+mul_4
+
+
+
+‡
+Äj!
+add_4
+
+
+
+‡
+Äj!
+pow_6
+
+
+
+‡
+Äj!
+sub_5
+
+
+
+‡
+Äj!
+mul_5
+
+
+
+‡
+Äj!
+add_5
+
+
+
+‡
+Äj!
+pow_7
+
+
+
+‡
+Äj!
+sub_6
+
+
+
+‡
+Äj!
+mul_6
+
+
+
+‡
+Äj!
+add_6
+
+
+
+‡
+Äj!
+pow_8
+
+
+
+‡
+Äj!
+sub_7
+
+
+
+‡
+Äj!
+mul_7
+
+
+
+‡
+ÄÇÕ
+0pkg.torch.export.ExportedProgram.graph_signatureò
+# inputs
+p_e_conv1_weight: PARAMETER target='e_conv1.weight'
+p_e_conv1_bias: PARAMETER target='e_conv1.bias'
+p_e_conv2_weight: PARAMETER target='e_conv2.weight'
+p_e_conv2_bias: PARAMETER target='e_conv2.bias'
+p_e_conv3_weight: PARAMETER target='e_conv3.weight'
+p_e_conv3_bias: PARAMETER target='e_conv3.bias'
+p_e_conv4_weight: PARAMETER target='e_conv4.weight'
+p_e_conv4_bias: PARAMETER target='e_conv4.bias'
+p_e_conv5_weight: PARAMETER target='e_conv5.weight'
+p_e_conv5_bias: PARAMETER target='e_conv5.bias'
+p_e_conv6_weight: PARAMETER target='e_conv6.weight'
+p_e_conv6_bias: PARAMETER target='e_conv6.bias'
+p_e_conv7_weight: PARAMETER target='e_conv7.weight'
+p_e_conv7_bias: PARAMETER target='e_conv7.bias'
+x: USER_INPUT
+
+# outputs
+add_3: USER_OUTPUT
+add_7: USER_OUTPUT
+cat_3: USER_OUTPUT
+Ç8
+2pkg.torch.export.ExportedProgram.range_constraints{}B
+ 
